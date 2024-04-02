@@ -1,25 +1,39 @@
 package com.vipun.dependencyInjection;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
 
-@SpringBootApplication
-public class DependencyInjectionApplication {
+public class
+
+
+
+DependencyInjectionApplication {
 
 	public static void main(String[] args) {
 
-		//Car car = new Car();
+		/*
+		// Create a bean factory
+		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
 
+		// Create a bean definition reader
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
 
+		// Load the Spring XML configuration file
+		reader.loadBeanDefinitions(new FileSystemResource("configBean.xml"));
+		 */
 
+		ApplicationContext factory = new ClassPathXmlApplicationContext("configBean.xml");
 
-		ApplicationContext context = SpringApplication.run(DependencyInjectionApplication.class, args);
+		// Retrieve the Car bean from the factory
+		Car car = (Car) factory.getBean("car");
 
-		Car car = (Car) context.getBean(Car.class);
-
+		// Use the Car object
 		car.drive();
+
+		System.out.println("Application running.........");
 	}
-
-
 }
