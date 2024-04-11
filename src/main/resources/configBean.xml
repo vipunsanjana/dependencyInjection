@@ -7,7 +7,7 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define a bean for Car -->
-    <bean id="car" class="com.vipun.dependencyInjection.Car">
+    <bean id="car" class="com.vipun.dependencyInjection.Car" scope="prototype">
         <!-- You can define properties or constructor arguments here if needed -->
     </bean>
 
