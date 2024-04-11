@@ -9,6 +9,7 @@
     <!-- Define a bean for Car -->
     <bean id="car" class="com.vipun.dependencyInjection.Car" scope="prototype">
         <!-- You can define properties or constructor arguments here if needed -->
+        <property name="price" value="100"></property>
     </bean>
 
 </beans>
