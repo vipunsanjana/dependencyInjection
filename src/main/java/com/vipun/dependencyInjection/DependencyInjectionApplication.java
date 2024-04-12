@@ -28,11 +28,15 @@ DependencyInjectionApplication {
 
 		ApplicationContext factory = new ClassPathXmlApplicationContext("configBean.xml");
 
+
+
+		
 		// Retrieve the Car bean from the factory
 		Car car = (Car) factory.getBean("car");
 
-		// Use the Car object
-		car.drive();
+		// Use this
+		System.out.println(car.hashCode());
+		System.out.println(car.getPrice());
 
 		System.out.println("Application running.........");
 	}
