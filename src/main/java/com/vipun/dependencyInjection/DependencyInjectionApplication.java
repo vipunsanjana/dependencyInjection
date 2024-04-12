@@ -36,6 +36,7 @@ DependencyInjectionApplication {
 
 		// Use this
 		System.out.println(car.hashCode());
+		System.out.println(car.getPrice());
 
 		System.out.println("Application running.........");
 	}

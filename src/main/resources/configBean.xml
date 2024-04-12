@@ -7,13 +7,19 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define a bean for Car -->
-    <bean id="car" class="com.vipun.dependencyInjection.Car">
+    <bean id="car" class="com.vipun.dependencyInjection.Car" autowire="byType">
         <!-- You can define properties or constructor arguments here if needed -->
+
+<!--        <constructor-arg value="100"></constructor-arg>-->
+<!--        <constructor-arg ref="v8engine"></constructor-arg>-->
+
         <property name="price" value="100"></property>
-        <property name="v8engine" ref="v8engine"></property>
+<!--        <property name="v8engine" ref="v8engine"></property>-->
+
     </bean>
 
-    <bean id="v8engine" class="com.vipun.dependencyInjection.V8" >
+<!--    <bean id="v8engine" class="com.vipun.dependencyInjection.V8" >-->
+    <bean id="v12" class="com.vipun.dependencyInjection.V12" >
 
     </bean>
 
