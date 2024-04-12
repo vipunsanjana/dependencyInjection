@@ -18,7 +18,7 @@
 
     </bean>
 
-<!--    <bean id="v8engine" class="com.vipun.dependencyInjection.V8" >-->
+    <bean id="engine" class="com.vipun.dependencyInjection.V8" primary="true" ></bean>
     <bean id="v12" class="com.vipun.dependencyInjection.V12" >
 
     </bean>
